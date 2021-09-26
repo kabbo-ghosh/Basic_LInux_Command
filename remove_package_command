@@ -1,0 +1,19 @@
+first list
+dpkg --list
+Then remove the given package
+
+sudo apt-get remove package_name
+
+Purge any related code
+
+sudo apt-get purge package_name
+
+Then Autoremove
+
+sudo apt-get autoremove
+
+Finally, do a clean so you check everything is correctly removed
+sudo apt auto clean
+
+if we have broken dependencies then
+sudo apt-get -f install 
