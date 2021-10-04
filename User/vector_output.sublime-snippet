@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+template <class T>
+ostream& operator<<(ostream& os, const vector<T>& v) {
+  if (!v.empty()) {
+    os << v.front();
+    for (int i = 1; i < v.size(); ++i)
+      os << ' ' << v[i];
+  }
+  return os;
+}
+]]></content>
+  <tabTrigger>vc_out</tabTrigger>
+  <description>vector_debug</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

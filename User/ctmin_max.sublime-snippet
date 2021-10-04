@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+template<class T, class U> T &ctmax(T &x, const U &y){ return x = max<T>(x, y); }
+template<class T, class U> T &ctmin(T &x, const U &y){ return x = min<T>(x, y); }
+]]></content>
+  <tabTrigger>ctmin</tabTrigger>
+  <description>ctmin_max</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[
+const ll INF = 1e18;
+struct floyed_warshall
+{
+    int n;
+    vector<vector<ll>> adj;
+    floyed_warshall(int _n = 0)
+    {
+        init(_n);
+    }
+
+    void init(int _n)
+    {
+        n = _n;
+        adj.assign(n, vector<ll>(n, INF));
+    }
+
+    void add_directional_edge(int a, int b, ll weight)
+    {
+        adj[a][b] = min(adj[a][b], weight);
+    }
+
+    void add_bidirectional_edge(int a, int b, ll weight)
+    {
+        add_directional_edge(a, b, weight);
+        add_directional_edge(b, a, weight);
+    }
+    void floyed()
+    {
+        for (int k = 0; k < n; ++k)
+        {
+            for (int i = 0; i < n; ++i)
+            {
+                adj[i][i] = 0;
+                for (int j = 0; j < n; ++j)
+                {
+                    adj[i][j] = min(adj[i][j], adj[i][k] + adj[k][j]);
+                }
+            }
+        }
+    }
+};
+]]></content>
+  <tabTrigger>floyed_warshall</tabTrigger>
+  <description>floyed</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

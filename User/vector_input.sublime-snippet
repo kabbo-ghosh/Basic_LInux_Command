@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+template <class T>
+istream &operator>>(istream &is, vector<T> &v)
+{
+    for (int i(1); i <= (int)v.size(); ++i)
+        is >> v[i];
+    return is;
+}
+]]></content>
+  <tabTrigger>vc_in</tabTrigger>
+  <description>vector_input</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

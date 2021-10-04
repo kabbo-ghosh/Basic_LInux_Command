@@ -1,0 +1,11 @@
+{
+	"clients":
+	{
+		"clangd":
+		{
+			"enabled": true
+		},
+
+	}
+
+}
